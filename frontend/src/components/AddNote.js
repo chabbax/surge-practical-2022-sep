@@ -49,7 +49,7 @@ const AddNote = () => {
         <div>
           <h4>You submitted successfully!</h4>
           <button className="btn btn-success" onClick={newNote}>
-            Add
+            Add Note
           </button>
         </div>
       ) : (
@@ -69,7 +69,7 @@ const AddNote = () => {
 
           <div className="form-group">
             <label htmlFor="description">Description</label>
-            <input
+            <textarea
               type="text"
               className="form-control"
               id="description"

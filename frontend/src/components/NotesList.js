@@ -62,7 +62,7 @@ const NotesList = () => {
   };
 
   return (
-    <div className="list row">
+    <div className="list column">
       <div className="col-md-8">
         <div className="input-group mb-3">
           <input
@@ -74,7 +74,7 @@ const NotesList = () => {
           />
           <div className="input-group-append">
             <button
-              className="btn btn-outline-secondary"
+              className="btn btn-primary"
               type="button"
               onClick={findByTitle}
             >
@@ -83,7 +83,8 @@ const NotesList = () => {
           </div>
         </div>
       </div>
-      <div className="col-md-6">
+      <br></br>
+      <div className="col-md-8">
         <h4>Notes List</h4>
 
         <ul className="list-group">
@@ -101,10 +102,13 @@ const NotesList = () => {
             ))}
         </ul>
 
-        <button className="m-3 btn btn-sm btn-danger" onClick={removeAllNotes}>
+        <button className="m-3 btn btn-danger" onClick={removeAllNotes}>
           Remove All
         </button>
       </div>
+      <br></br>
+      <br></br>
+
       <div className="col-md-6">
         {currentNote ? (
           <div>
@@ -130,7 +134,7 @@ const NotesList = () => {
 
             <Link
               to={"/notes/" + currentNote.id}
-              className="badge badge-warning"
+              className="m-1 btn btn-warning"
             >
               Edit
             </Link>

@@ -50,7 +50,7 @@ const App = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link to={"/"} className="navbar-brand">
           SURGE GLOBAL
         </Link>
@@ -62,12 +62,12 @@ const App = () => {
           </li>
           <li className="nav-item">
             <Link to={"/notes"} className="nav-link">
-              Notes
+              NotesList
             </Link>
           </li>
           <li className="nav-item">
             <Link to={"/add"} className="nav-link">
-              Add
+              AddNote
             </Link>
           </li>
 

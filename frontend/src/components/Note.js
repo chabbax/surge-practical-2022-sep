@@ -114,27 +114,27 @@ const Note = (props) => {
 
           {currentNote.published ? (
             <button
-              className="badge badge-primary mr-2"
+              className="m-3 btn btn-primary"
               onClick={() => updatePublished(false)}
             >
               UnPublish
             </button>
           ) : (
             <button
-              className="badge badge-primary mr-2"
+              className="m-3 btn btn-primary"
               onClick={() => updatePublished(true)}
             >
               Publish
             </button>
           )}
 
-          <button className="badge badge-danger mr-2" onClick={deleteNote}>
+          <button className="btn btn-danger" onClick={deleteNote}>
             Delete
           </button>
 
           <button
             type="submit"
-            className="badge badge-success"
+            className="m-3 btn btn-warning"
             onClick={updateNote}
           >
             Update

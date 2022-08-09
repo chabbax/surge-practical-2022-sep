@@ -31,7 +31,23 @@ const BoardUser = () => {
   return (
     <div className="container">
       <header className="jumbotron">
-        <h3>{content}</h3>
+        <h1 class="display-4">Hello, Surge!</h1>
+        <h6>{content}</h6>
+        <br></br>
+
+        <p class="lead">
+          This is the protected route which is displayed to only the user's with
+          the USER_ROLE
+        </p>
+        <p>
+          The user can naviagte to their created notes and do any kind of CRUD
+          operations their
+        </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="/notes" role="button">
+            Learn more
+          </a>
+        </p>
       </header>
     </div>
   );
