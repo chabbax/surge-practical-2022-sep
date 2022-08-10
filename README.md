@@ -112,8 +112,8 @@ dependencies {
 ```
 
 **Problem with newer JDK**
-If you run this Spring Boot App with JDK 9 or newer versions and get following error when trying to authenticate:
 
+If you run this Spring Boot App with JDK 9 or newer versions and get following error when trying to authenticate:
 `FilterChain java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter`
 
 Just add following dependency to pom.xml:
