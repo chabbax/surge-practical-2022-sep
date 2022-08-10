@@ -14,6 +14,7 @@ In this application any type of user would be able to perform CRUD operations fo
 - Search functionality
 - Protected routing
 - Error handling
+- Loading animations
 - Dockerized 
 
 ## Prerequisites :white_check_mark:
