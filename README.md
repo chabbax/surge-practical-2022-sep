@@ -100,6 +100,7 @@ Docker Compose
 1. docker-compose up
 (Note: while testing there seems to be an issue with data transfer to the backend and database due to a port issue however the application runs)
 ```
+
 ---
 ## Troubleshooting
 
@@ -125,6 +126,7 @@ dependencies {
 }
 ```
 
+
 **Problem with newer JDK**
 
 If you run this Spring Boot App with JDK 9 or newer versions and get following error when trying to authenticate:
@@ -138,7 +140,8 @@ Just add following dependency to pom.xml:
     <version>2.3.2</version>
 </dependency>
 ```
----
+
+
 ## Author
 
 - Name : Chandur Dissanayake
