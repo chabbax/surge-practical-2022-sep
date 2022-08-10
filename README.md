@@ -48,7 +48,7 @@ Register some users with /signup API using Postman:
 
 ![signup.api](images/signup.api.png)
 
-
+<br>
 After make some user registration, users collection could look like this-
 ![surge.users](images/surge.users.png)
 
