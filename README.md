@@ -48,26 +48,34 @@ Register some users with /signup API using Postman:
 
 ![signup.api](images/signup.api.png)
 
+
 After make some user registration, users collection could look like this-
 ![surge.users](images/surge.users.png)
+
 
 Access public resource: GET `/api/test/all`
 ![access.protected.all](images/access.protected.all.png)
 
+
 Access protected resource: GET `/api/test/user`
 ![access.protected.user](images/access.protected.user.png)
+
 
 Login an account: POST `/api/auth/signin`
 ![signin.api](images/signin.api.png)
 
+
 Access `ROLE_USER` resource: GET `/api/test/user`
 ![user.Bearer](images/user.Bearer.png)
+
 
 Access `ROLE_MODERATOR` resource: GET `/api/test/mod`
 ![mod.Bearer](images/mod.Bearer.png)
 
+
 Access `ROLE_ADMIN` resource: GET `/api/test/admin`
 ![admin.Bearer](images/admin.Bearer.png)
+
 
 ---
 ## Getting Started - Installation :computer:
