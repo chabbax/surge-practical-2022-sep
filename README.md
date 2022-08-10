@@ -89,7 +89,6 @@ Clone Repository
 
 Backend
 1.  cd backend
-2.  mvn clean install   
 3.  mvn spring-boot:run
 
 Frontend
