@@ -5,6 +5,8 @@
 # Overview :globe_with_meridians:
 In this application any type of user would be able to perform CRUD operations for the notes functionality where they can save notes which will be saved in the MongoDB compass database. In order to do this the user must first register an account then login and after a successful login the user will be able to see user specifc content. For example : if the user role is the moderator, after loggin in the moderator user can see the moderator dashboard in the navigation bar however the user with a user role would not be able to see that in their navigation bar. All user data will also be stored in MongoDB compass as a seperate collection and their passwords will be encrypeted using base64 and all user data will be stored including the role type.
 
+![authentication](images/authentication.png)
+
 # Features
 - Basic CRUD operations
 - Role-based authentication with JWT token
