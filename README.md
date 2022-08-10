@@ -16,14 +16,27 @@ In this application any type of user would be able to perform CRUD operations fo
 
 ## Prerequisites :white_check_mark:
 - [x] Installation of Java 8 or above
+- [x] Installation of Node (16 LTS)
+- [x] Installation of Yarn package manager
 - [x] Installation of Maven with path variable added
 - [x] MongoDB Compass installed locally on running server in port 27017 (mongodb://localhost:27017)
+- [x] Installation of Docker and docker-compose
 
 ## Getting Started - Installation :computer:
 
 ```
-1.  git clone https://github.com/Chabbax/spring-tutorial-microservice.git
-2.  mvn spring-boot:run
+Clone Repository
+1.  git clone https://github.com/Chabbax/surge-practical-2022-sep.git
+
+Backend
+1.  cd backend
+2.  mvn clean install   
+3.  mvn spring-boot:run
+
+Frontend
+1.  cd frontend
+2.  yarn
+3.  yarn start
 ```
 
 ## User Registration, Login and Authorization process.
