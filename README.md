@@ -7,7 +7,7 @@ In this application any type of user would be able to perform CRUD operations fo
 
 ![authentication](images/authentication.png)
 
-# Features
+# Features :white_check_mark:
 - Basic CRUD operations
 - Role-based authentication with JWT token
 - User role specific content
@@ -24,6 +24,19 @@ In this application any type of user would be able to perform CRUD operations fo
 - [x] MongoDB Compass installed locally on running server in port 27017 (mongodb://localhost:27017)
 - [x] Installation of Docker and docker-compose
 - [x] Installation of Postman
+
+## Post Installation :computer:
+Before getting started we need to first configure some database configurations. Start the backend spring boot application using `mvn spring-boot:run`
+Then open your MongoDB compass and open the `MONGOSH` terminal and enter the following commands in order. These commands switches to your database name and then adds `roles` to the roles collection.
+
+```
+1. use surge
+2. db.roles.insertMany([
+   { name: "ROLE_USER" },
+   { name: "ROLE_MODERATOR" },
+   { name: "ROLE_ADMIN" },
+])
+``` 
 
 ## Getting Started - Installation :computer:
 
