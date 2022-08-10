@@ -56,26 +56,31 @@ After make some user registration, users collection could look like this-
 <br>
 Access public resource: GET `/api/test/all`
 ![access.protected.all](images/access.protected.all.png)
-
+</br>
 <br>
 Access protected resource: GET `/api/test/user`
 ![access.protected.user](images/access.protected.user.png)
+</br>
 
 <br>
 Login an account: POST `/api/auth/signin`
 ![signin.api](images/signin.api.png)
+</br>
 
 <br>
 Access `ROLE_USER` resource: GET `/api/test/user`
 ![user.Bearer](images/user.Bearer.png)
+</br>
 
 <br>
 Access `ROLE_MODERATOR` resource: GET `/api/test/mod`
 ![mod.Bearer](images/mod.Bearer.png)
+</br>
 
 <br>
 Access `ROLE_ADMIN` resource: GET `/api/test/admin`
 ![admin.Bearer](images/admin.Bearer.png)
+</br>
 
 
 ---
