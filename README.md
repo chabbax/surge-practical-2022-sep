@@ -88,7 +88,7 @@ Frontend
 
 Docker Compose
 1. docker-compose up
-(Note: while testing there seems to be an issue with data transfer to the backend and database due to a port issue)
+(Note: while testing there seems to be an issue with data transfer to the backend and database due to a port issue however the application runs)
 ```
 ---
 ## Troubleshooting
