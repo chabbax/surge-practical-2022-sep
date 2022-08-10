@@ -23,6 +23,7 @@ In this application any type of user would be able to perform CRUD operations fo
 - [x] Installation of Maven with path variable added
 - [x] MongoDB Compass installed locally on running server in port 27017 (mongodb://localhost:27017)
 - [x] Installation of Docker and docker-compose
+- [x] Installation of Postman
 
 ## Getting Started - Installation :computer:
 
