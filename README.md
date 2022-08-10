@@ -40,6 +40,7 @@ Then open your MongoDB compass and open the `MONGOSH` terminal and enter the fol
 The MongoDB roles collection should look something like this:
 ![surge.roles](images/surge.roles.png)
 
+<br>
 Register some users with /signup API using Postman:
 
 - admin with `ROLE_ADMIN`
@@ -52,27 +53,27 @@ Register some users with /signup API using Postman:
 After make some user registration, users collection could look like this-
 ![surge.users](images/surge.users.png)
 
-
+<br>
 Access public resource: GET `/api/test/all`
 ![access.protected.all](images/access.protected.all.png)
 
-
+<br>
 Access protected resource: GET `/api/test/user`
 ![access.protected.user](images/access.protected.user.png)
 
-
+<br>
 Login an account: POST `/api/auth/signin`
 ![signin.api](images/signin.api.png)
 
-
+<br>
 Access `ROLE_USER` resource: GET `/api/test/user`
 ![user.Bearer](images/user.Bearer.png)
 
-
+<br>
 Access `ROLE_MODERATOR` resource: GET `/api/test/mod`
 ![mod.Bearer](images/mod.Bearer.png)
 
-
+<br>
 Access `ROLE_ADMIN` resource: GET `/api/test/admin`
 ![admin.Bearer](images/admin.Bearer.png)
 
