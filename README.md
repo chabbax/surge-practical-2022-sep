@@ -1,5 +1,7 @@
 # Spring Boot & React crud application with role-based authentication 
 
+![architecture](Architecture.png)
+
 - Appropriate Flow for User Signup & User Login with JWT Authentication
 - Spring Boot Application Architecture with Spring Security
 - How to configure Spring Security to work with JWT
