@@ -37,6 +37,38 @@ Then open your MongoDB compass and open the `MONGOSH` terminal and enter the fol
    { name: "ROLE_ADMIN" },
 ])
 ``` 
+The MongoDB roles collection should look something like this:
+![surge.roles](images/surge.roles.png)
+
+Register some users with /signup API using Postman:
+
+admin with `ROLE_ADMIN`
+moderator with `ROLE_MODERATOR` and `ROLE_USER`
+surge with `ROLE_USER`
+
+![signup.api](images/signup.api.png)
+
+After make some user registration, users collection could look like this-
+![surge.users](images/surge.users.png)
+
+Access public resource: GET `/api/test/all`
+![access.protected.all](images/access.protected.all.png)
+
+Access protected resource: GET `/api/test/user`
+![access.protected.user](images/access.protected.user.png)
+
+Login an account: POST `/api/auth/signin`
+![signin.api](images/signin.api.png)
+
+Access `ROLE_USER` resource: GET `/api/test/user`
+![user.Bearer](images/user.Bearer.png)
+
+Access `ROLE_MODERATOR` resource: GET `/api/test/mod`
+![mod.Bearer](images/mod.Bearer.png)
+
+Access `ROLE_ADMIN` resource: GET `/api/test/admin`
+![admin.Bearer](images/admin.Bearer.png)
+
 
 ## Getting Started - Installation :computer:
 
@@ -55,51 +87,45 @@ Frontend
 3.  yarn start
 ```
 
-## User Registration, Login and Authorization process.
+## Troubleshooting
 
-![spring-boot-mongodb-jwt-authentication-flow](spring-boot-mongodb-jwt-authentication-flow.png)
+# Solve Problem: javax.validation cannot be resolved
 
-## Configuration
+For Spring Boot 2.3 and later, you can see the compile error:
+The import javax.validation cannot be resolved
 
-Make sure to add your own `mangoURI` from your [MangoDB](http://mangodb.com) database and put in  `config/default.json`.
-
-```javascript
-{
-    "mongoURI": "YOUR_MONGO_URI_HERE",
-    "secretOrKey": "secret"
+It is because Validation Starter no longer included in web starters. So you need to add the starter yourself.
+– For Maven:
+```
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
+– For Gradle:
+```
+dependencies {
+  ...
+  implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
-``` 
-
-## Spring Boot Rest API Architecture with Spring Security
-You can have an overview of our Spring Boot Server with the diagram below:
-
-![spring-boot-mongodb-jwt-authentication-spring-security-architecture](spring-boot-mongodb-jwt-authentication-spring-security-architecture.png)
-
-For more detail, please visit:
-> [Spring Boot, MongoDB: JWT Authentication with Spring Security](https://bezkoder.com/spring-boot-jwt-auth-mongodb/)
-
-Working with Front-end:
-> [Vue](https://www.bezkoder.com/jwt-vue-vuex-authentication/)
-
-> [Angular 8](https://www.bezkoder.com/angular-jwt-authentication/) / [Angular 10](https://www.bezkoder.com/angular-10-jwt-auth/) / [Angular 11](https://www.bezkoder.com/angular-11-jwt-auth/) / [Angular 12](https://www.bezkoder.com/angular-12-jwt-auth/) / [Angular 13](https://www.bezkoder.com/angular-13-jwt-auth/)
-
-> [React](https://www.bezkoder.com/react-jwt-auth/) / [React Redux](https://www.bezkoder.com/react-redux-jwt-auth/)
-
-More Practice:
-> [Spring Boot with MongoDB CRUD example using Spring Data](https://www.bezkoder.com/spring-boot-mongodb-crud/)
-
-> [Spring Boot MongoDB Pagination & Filter example](https://www.bezkoder.com/spring-boot-mongodb-pagination/)
-
-> [Spring Boot + GraphQL + MongoDB example](https://www.bezkoder.com/spring-boot-graphql-mongodb-example-graphql-java/)
-
-Run both Back-end & Front-end in one place:
-> [Integrate Angular with Spring Boot Rest API](https://www.bezkoder.com/integrate-angular-spring-boot/)
-
-> [Integrate React with Spring Boot Rest API](https://www.bezkoder.com/integrate-reactjs-spring-boot/)
-
-> [Integrate Vue with Spring Boot Rest API](https://www.bezkoder.com/integrate-vue-spring-boot/)
-
-## Run Spring Boot application
 ```
-mvn spring-boot:run
+
+# Problem with newer JDK
+If you run this Spring Boot App with JDK 9 or newer versions and get following error when trying to authenticate:
+
+FilterChain java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter
+Just add following dependency to pom.xml:
 ```
+<dependency>
+    <groupId>jakarta.xml.bind</groupId>
+    <artifactId>jakarta.xml.bind-api</artifactId>
+    <version>2.3.2</version>
+</dependency>
+```
+
+## Author
+
+Name : Chandur Dissanayake
+Email: chandur.work@gmail.com
+LinkedIn : https://www.linkedin.com/in/chandur-work/
+
