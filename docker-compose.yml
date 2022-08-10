@@ -1,0 +1,36 @@
+version: "3"
+services:
+
+  mongodb:
+    image: mongo:latest
+    container_name: yamadb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: olaf
+      MONGO_INITDB_ROOT_PASSWORD: retorsion12
+      MONGO_INITDB_DATABASE: bezkoder_db
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+
+  backend:
+    container_name: backend
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    depends_on: 
+      - mongodb
+    ports:
+      - 8090:8080
+
+
+  frontend:
+    container_name: frontend
+    stdin_open: true
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    depends_on: 
+      - backend
+    ports:
+      - 3000:3000
