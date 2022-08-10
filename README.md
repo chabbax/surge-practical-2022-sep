@@ -64,7 +64,7 @@ Access protected resource: GET `/api/test/user`
 
 
 Login an account: POST `/api/auth/signin`
-![signin.api](images/signin.api.png)
+![signing.api](images/signing.api.png)
 
 
 Access `ROLE_USER` resource: GET `/api/test/user`
