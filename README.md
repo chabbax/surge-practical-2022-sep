@@ -1,4 +1,4 @@
-# Spring Boot, Spring Security, MongoDB - JWT Authentication & Authorization example
+# Spring Boot & React crud application with role-based authentication 
 
 - Appropriate Flow for User Signup & User Login with JWT Authentication
 - Spring Boot Application Architecture with Spring Security
