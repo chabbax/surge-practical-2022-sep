@@ -101,7 +101,7 @@ Docker Compose
 (Note: while testing there seems to be an issue with data transfer to the backend and database due to a port issue however the application runs)
 ```
 
----
+
 ## Troubleshooting
 
 **Solve Problem: javax.validation cannot be resolved**
