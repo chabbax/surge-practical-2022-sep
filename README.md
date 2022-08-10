@@ -85,6 +85,10 @@ Frontend
 1.  cd frontend
 2.  yarn
 3.  yarn start
+
+Docker Compose
+1. docker-compose up
+(Note: while testing there seems to be an issue with data transfer to the backend and database due to a port issue)
 ```
 ---
 ## Troubleshooting
