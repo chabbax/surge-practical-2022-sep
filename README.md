@@ -69,7 +69,7 @@ Access `ROLE_MODERATOR` resource: GET `/api/test/mod`
 Access `ROLE_ADMIN` resource: GET `/api/test/admin`
 ![admin.Bearer](images/admin.Bearer.png)
 
-
+---
 ## Getting Started - Installation :computer:
 
 ```
@@ -110,7 +110,6 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 ```
----
 
 **Problem with newer JDK**
 
