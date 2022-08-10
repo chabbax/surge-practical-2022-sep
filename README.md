@@ -92,9 +92,10 @@ Frontend
 # Solve Problem: javax.validation cannot be resolved
 
 For Spring Boot 2.3 and later, you can see the compile error:
-The import javax.validation cannot be resolved
+`The import javax.validation cannot be resolved`
 
 It is because Validation Starter no longer included in web starters. So you need to add the starter yourself.
+
 – For Maven:
 ```
 <dependency>
@@ -113,7 +114,8 @@ dependencies {
 # Problem with newer JDK
 If you run this Spring Boot App with JDK 9 or newer versions and get following error when trying to authenticate:
 
-FilterChain java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter
+`FilterChain java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter`
+
 Just add following dependency to pom.xml:
 ```
 <dependency>
@@ -125,7 +127,7 @@ Just add following dependency to pom.xml:
 
 ## Author
 
-Name : Chandur Dissanayake
-Email: chandur.work@gmail.com
-LinkedIn : https://www.linkedin.com/in/chandur-work/
+- Name : Chandur Dissanayake
+- Email: chandur.work@gmail.com
+- LinkedIn : https://www.linkedin.com/in/chandur-work/
 
