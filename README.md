@@ -42,9 +42,9 @@ The MongoDB roles collection should look something like this:
 
 Register some users with /signup API using Postman:
 
-admin with `ROLE_ADMIN`
-moderator with `ROLE_MODERATOR` and `ROLE_USER`
-surge with `ROLE_USER`
+- admin with `ROLE_ADMIN`
+- moderator with `ROLE_MODERATOR` and `ROLE_USER`
+- surge with `ROLE_USER`
 
 ![signup.api](images/signup.api.png)
 
