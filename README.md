@@ -86,7 +86,7 @@ Frontend
 2.  yarn
 3.  yarn start
 ```
-
+---
 ## Troubleshooting
 
 **Solve Problem: javax.validation cannot be resolved**
@@ -110,6 +110,7 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 ```
+---
 
 **Problem with newer JDK**
 
@@ -124,7 +125,7 @@ Just add following dependency to pom.xml:
     <version>2.3.2</version>
 </dependency>
 ```
-
+---
 ## Author
 
 - Name : Chandur Dissanayake
