@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.surge.spring.jwt.mongodb.models.Note;
 import com.surge.spring.jwt.mongodb.repository.NoteRepository;
 
+// NoteController is a RestController which has request mapping methods for RESTful requests such as: getAllNotes, createNote, updateNote, deleteNote, findByPublished
 @CrossOrigin(origins = "*", allowedHeaders = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
@@ -29,6 +30,7 @@ public class NoteController {
   @Autowired
   NoteRepository noteRepository;
 
+  // We use @GetMapping annotation for handling GET HTTP requests, then Repository’s findAll(), findByTitleContaining(title), findByPublished() method to get the result.
   @GetMapping("/notes")
   public ResponseEntity<List<Note>> getAllNotes(@RequestParam(required = false) String title) {
     try {
@@ -60,6 +62,7 @@ public class NoteController {
     }
   }
 
+  //  We use @PostMapping annotation for handling POST HTTP requests. A new Tutorial will be created by MongoRepository.save() method.
   @PostMapping("/notes")
   public ResponseEntity<Note> createNote(@RequestBody Note note) {
     try {
@@ -70,6 +73,7 @@ public class NoteController {
     }
   }
 
+  // @PutMapping will help us handle PUT HTTP requests and we use the payload and save() method for updating the Note.
   @PutMapping("/notes/{id}")
   public ResponseEntity<Note> updateNote(@PathVariable("id") String id, @RequestBody Note note) {
     Optional<Note> noteData = noteRepository.findById(id);
@@ -85,6 +89,7 @@ public class NoteController {
     }
   }
 
+  // We use @DeleteMapping for DELETE HTTP requests with the help of MongoRepository’s deleteById() and deleteAll() method.
   @DeleteMapping("/notes/{id}")
   public ResponseEntity<HttpStatus> deleteNote(@PathVariable("id") String id) {
     try {

@@ -3,6 +3,7 @@ package com.surge.spring.jwt.mongodb.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+// @Document annotation helps us override the collection name by “roles”.
 @Document(collection = "roles")
 public class Role {
   @Id

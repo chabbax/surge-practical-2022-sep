@@ -1,3 +1,4 @@
+// Getting full custom User object using UserRepository, then we build a UserDetails object using static build() method.
 package com.surge.spring.jwt.mongodb.security.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
 	UserRepository userRepository;
 
+	// UserDetailsService will be used for getting UserDetails object.
 	@Override
 	@Transactional
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

@@ -1,3 +1,6 @@
+/* Defining a filter that executes once per request. So we create AuthTokenFilter class that 
+extends OncePerRequestFilter and override doFilterInternal() method. */
+
 package com.surge.spring.jwt.mongodb.security.jwt;
 
 import java.io.IOException;
@@ -28,6 +31,12 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 
   private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
 
+  /*
+   * Get JWT from the Authorization header (by removing Bearer prefix)
+   * If the request has JWT, validate it, parse username from it
+   * From username, get UserDetails to create an Authentication object
+   * Set the current UserDetails in SecurityContext using setAuthentication(authentication) method. 
+  */
   @Override
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
       throws ServletException, IOException {

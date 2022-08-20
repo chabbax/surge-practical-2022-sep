@@ -1,3 +1,4 @@
+// MessageResponse: { message }
 package com.surge.spring.jwt.mongodb.payload.response;
 
 public class MessageResponse {

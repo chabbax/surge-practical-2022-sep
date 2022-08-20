@@ -1,3 +1,11 @@
+/* 
+ * This service uses Axios for HTTP requests and Local Storage for user information & JWT
+ * login(): POST {username, password} & save JWT to Local Storage
+ * logout(): remove JWT from Local Storage
+ * register(): POST {username, email, password}
+ * getCurrentUser(): get stored user information (including JWT)
+*/
+
 import axios from "axios";
 
 const API_URL = "http://localhost:8090/api/auth/";

@@ -51,6 +51,13 @@ public class AuthController {
 	@Autowired
 	JwtUtils jwtUtils;
 
+	/*
+	 *  authenticate { username, pasword }
+	 *  update SecurityContext using Authentication object
+     *  generate JWT
+     *  get UserDetails from Authentication object
+     *  response contains JWT and UserDetails data
+	 */
 	@PostMapping("/signin")
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
@@ -72,6 +79,7 @@ public class AuthController {
 				roles));
 	}
 
+	// Checking existing username or email
 	@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
 		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
@@ -122,7 +130,7 @@ public class AuthController {
 		}
 
 		user.setRoles(roles);
-		userRepository.save(user);
+		userRepository.save(user); // Save User to database using UserRepository
 
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
 	}

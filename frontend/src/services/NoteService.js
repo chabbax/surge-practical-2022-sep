@@ -1,6 +1,7 @@
 import http from "../http-common";
 import authHeader from "./auth-header";
 
+// Creates a service that uses axios object above to send HTTP requests to the APIs.
 const getAll = () => {
   return http.get("/notes", { headers: authHeader() });
 };

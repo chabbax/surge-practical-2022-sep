@@ -1,3 +1,4 @@
+// Gets current User from Local Storage by calling AuthService.getCurrentUser() method and show user information (with token).
 import React from "react";
 import AuthService from "../services/auth.service";
 

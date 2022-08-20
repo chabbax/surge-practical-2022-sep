@@ -3,6 +3,7 @@ package com.surge.spring.jwt.mongodb.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+// We define Noteclass and its variables and @Document annotation helps us override the collection name by “notes”.
 @Document(collection = "notes")
 public class Note {
   @Id

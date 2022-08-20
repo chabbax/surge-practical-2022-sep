@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
+
+// Added react-validation library
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -16,6 +18,7 @@ const required = (value) => {
   }
 };
 
+// If the verification is ok, we call AuthService.login() method, then direct user to Profile page using useNavigate() hook, or show message with response error.
 const Login = () => {
   let navigate = useNavigate();
 

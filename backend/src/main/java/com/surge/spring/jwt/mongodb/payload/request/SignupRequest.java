@@ -1,3 +1,4 @@
+// SignupRequest: { username, email, password }
 package com.surge.spring.jwt.mongodb.payload.request;
 
 import java.util.Set;

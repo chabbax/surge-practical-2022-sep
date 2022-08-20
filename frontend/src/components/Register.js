@@ -6,6 +6,12 @@ import { isEmail } from "validator";
 
 import AuthService from "../services/auth.service";
 
+/* 
+ * Form Validations
+ * username: required, between 3 and 20 characters
+ * email: required, email format
+ * password: required, between 6 and 40 characters
+*/
 const required = (value) => {
   if (!value) {
     return (
@@ -46,6 +52,7 @@ const vpassword = (value) => {
   }
 };
 
+// Call AuthService.register() method and show response message (successful or error)
 const Register = () => {
   const form = useRef();
   const checkBtn = useRef();

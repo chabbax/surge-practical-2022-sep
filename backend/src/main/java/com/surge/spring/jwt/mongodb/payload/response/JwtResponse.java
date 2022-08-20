@@ -1,3 +1,4 @@
+// JwtResponse: { token, type, id, username, email, roles }
 package com.surge.spring.jwt.mongodb.payload.response;
 
 import java.util.List;

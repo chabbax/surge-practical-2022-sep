@@ -1,3 +1,8 @@
+/* 
+ * If the authentication process is successful, we can get User’s information 
+ * such as username, password, authorities from an Authentication object. 
+*/
+
 package com.surge.spring.jwt.mongodb.security.services;
 
 import java.util.Collection;

@@ -1,3 +1,9 @@
+/* 
+ * Create AuthEntryPointJwt class that implements AuthenticationEntryPoint interface. 
+ * Then we override the commence() method. This method will be triggerd anytime unauthenticated 
+ * User requests a secured HTTP resource and an AuthenticationException is thrown. 
+*/
+
 package com.surge.spring.jwt.mongodb.security.jwt;
 
 import java.io.IOException;

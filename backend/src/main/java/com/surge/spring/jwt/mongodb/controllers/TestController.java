@@ -10,23 +10,29 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/test")
 public class TestController {
+
+	// For public access
 	@GetMapping("/all")
 	public String allAccess() {
 		return "Public Content.";
 	}
 
+	// For users has ROLE_USER or ROLE_MODERATOR or ROLE_ADMIN
+	// Secure methods in our Apis with @PreAuthorize annotation
 	@GetMapping("/user")
-	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')") 
 	public String userAccess() {
 		return "User Content.";
 	}
 
+	// For users has ROLE_MODERATOR
 	@GetMapping("/mod")
-	@PreAuthorize("hasRole('MODERATOR')")
+	@PreAuthorize("hasRole('MODERATOR')")  
 	public String moderatorAccess() {
 		return "Moderator Board.";
 	}
 
+	// For users has ROLE_ADMIN
 	@GetMapping("/admin")
 	@PreAuthorize("hasRole('ADMIN')")
 	public String adminAccess() {
