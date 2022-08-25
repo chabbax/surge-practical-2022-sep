@@ -1,10 +1,10 @@
 db.createUser({
-  user: "yamaLoader",
-  pwd: "broomhead",
+  user: "chandur",
+  pwd: "12345",
   roles: [
     {
       role: "readWrite",
-      db: "bezkoder_db",
+      db: "surge",
     },
   ],
 });

@@ -16,6 +16,6 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=frontend /app/build /usr/share/nginx/html
 
-EXPOSE 3000
+EXPOSE 8081
 
 CMD ["nginx", "-g", "daemon off;"]

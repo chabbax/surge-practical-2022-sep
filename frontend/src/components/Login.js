@@ -25,21 +25,25 @@ const Login = () => {
   const form = useRef();
   const checkBtn = useRef();
 
+  // Tracking the state of the object and assigning them to different objects accordingly 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
+  // Assign new state for username
   const onChangeUsername = (e) => {
     const username = e.target.value;
     setUsername(username);
   };
 
+  // Assign new state for password
   const onChangePassword = (e) => {
     const password = e.target.value;
     setPassword(password);
   };
 
+  // Handling login function
   const handleLogin = (e) => {
     e.preventDefault();
 

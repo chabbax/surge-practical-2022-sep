@@ -6,15 +6,19 @@ const Note = (props) => {
   const { id } = useParams();
   let navigate = useNavigate();
 
+  // Initializing the state
   const initialNoteState = {
     id: null,
     title: "",
     description: "",
     published: false,
   };
+
+  // Tracking the state of the object and assigning them to different objects accordingly 
   const [currentNote, setCurrentNote] = useState(initialNoteState);
   const [message, setMessage] = useState("");
 
+  // Getting the current state for note function
   const getNote = (id) => {
     NoteDataService.get(id)
       .then((response) => {
@@ -26,6 +30,7 @@ const Note = (props) => {
       });
   };
 
+  // After rendering 
   useEffect(() => {
     if (id) getNote(id);
   }, [id]);
@@ -35,6 +40,7 @@ const Note = (props) => {
     setCurrentNote({ ...currentNote, [name]: value });
   };
 
+  // Updating the current state for publish function
   const updatePublished = (status) => {
     var data = {
       id: currentNote.id,
@@ -53,6 +59,7 @@ const Note = (props) => {
       });
   };
 
+  // Updating the current state for update note function
   const updateNote = () => {
     NoteDataService.update(currentNote.id, currentNote)
       .then((response) => {
@@ -64,6 +71,7 @@ const Note = (props) => {
       });
   };
 
+  // Removing the current state for delete note function
   const deleteNote = () => {
     NoteDataService.remove(currentNote.id)
       .then((response) => {

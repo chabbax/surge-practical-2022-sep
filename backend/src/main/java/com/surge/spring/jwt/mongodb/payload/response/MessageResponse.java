@@ -1,4 +1,7 @@
-// MessageResponse: { message }
+/**
+ *  Define response payloads for Spring RestController
+ * 	MessageResponse: { message }
+*/
 package com.surge.spring.jwt.mongodb.payload.response;
 
 public class MessageResponse {

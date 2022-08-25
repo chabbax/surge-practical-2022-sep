@@ -6,7 +6,7 @@ import { isEmail } from "validator";
 
 import AuthService from "../services/auth.service";
 
-/* 
+/**
  * Form Validations
  * username: required, between 3 and 20 characters
  * email: required, email format
@@ -57,27 +57,32 @@ const Register = () => {
   const form = useRef();
   const checkBtn = useRef();
 
+  // Initializing the state
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [successful, setSuccessful] = useState(false);
   const [message, setMessage] = useState("");
 
+  // Assign new state for username
   const onChangeUsername = (e) => {
     const username = e.target.value;
     setUsername(username);
   };
 
+  // Assign new state for email
   const onChangeEmail = (e) => {
     const email = e.target.value;
     setEmail(email);
   };
 
+  // Assign new state for password
   const onChangePassword = (e) => {
     const password = e.target.value;
     setPassword(password);
   };
 
+  // Handling register function
   const handleRegister = (e) => {
     e.preventDefault();
 

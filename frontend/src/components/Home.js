@@ -6,6 +6,7 @@ import UserService from "../services/user.service";
 const Home = () => {
   const [content, setContent] = useState("");
 
+  // Rendering public content visible for any type of role
   useEffect(() => {
     UserService.getPublicContent().then(
       (response) => {

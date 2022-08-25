@@ -1,3 +1,4 @@
+// NoteController is a RestController which has request mapping methods for RESTful requests such as: getAllNotes, createNote, updateNote, deleteNote, findByPublished
 package com.surge.spring.jwt.mongodb.controllers;
 
 import java.util.ArrayList;
@@ -21,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.surge.spring.jwt.mongodb.models.Note;
 import com.surge.spring.jwt.mongodb.repository.NoteRepository;
 
-// NoteController is a RestController which has request mapping methods for RESTful requests such as: getAllNotes, createNote, updateNote, deleteNote, findByPublished
 @CrossOrigin(origins = "*", allowedHeaders = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
@@ -62,7 +62,7 @@ public class NoteController {
     }
   }
 
-  //  We use @PostMapping annotation for handling POST HTTP requests. A new Tutorial will be created by MongoRepository.save() method.
+  //  We use @PostMapping annotation for handling POST HTTP requests. A new Note will be created by MongoRepository.save() method.
   @PostMapping("/notes")
   public ResponseEntity<Note> createNote(@RequestBody Note note) {
     try {

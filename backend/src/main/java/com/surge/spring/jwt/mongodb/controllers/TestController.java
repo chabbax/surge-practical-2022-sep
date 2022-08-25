@@ -1,3 +1,4 @@
+// Controller for testing Authorization
 package com.surge.spring.jwt.mongodb.controllers;
 
 import org.springframework.security.access.prepost.PreAuthorize;

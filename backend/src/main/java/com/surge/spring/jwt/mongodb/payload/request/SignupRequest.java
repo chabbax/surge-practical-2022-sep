@@ -1,4 +1,7 @@
-// SignupRequest: { username, email, password }
+/**
+ *  Define request payloads for Spring RestController
+ * 	SignupRequest: { username, email, password }
+*/
 package com.surge.spring.jwt.mongodb.payload.request;
 
 import java.util.Set;

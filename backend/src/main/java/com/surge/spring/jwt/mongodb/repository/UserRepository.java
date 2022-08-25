@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.surge.spring.jwt.mongodb.models.User;
 
-// User model needs a repository for persisting and accessing data
+// User model needs a repository for persisting and accessing data so we use MongoRepository methods to query them
 public interface UserRepository extends MongoRepository<User, String> {
   Optional<User> findByUsername(String username);
 

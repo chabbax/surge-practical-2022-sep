@@ -31,7 +31,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 
   private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
 
-  /*
+  /**
    * Get JWT from the Authorization header (by removing Bearer prefix)
    * If the request has JWT, validate it, parse username from it
    * From username, get UserDetails to create an Authentication object

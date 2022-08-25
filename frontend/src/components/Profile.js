@@ -3,6 +3,8 @@ import React from "react";
 import AuthService from "../services/auth.service";
 
 const Profile = () => {
+
+  // Fetch details current state logged in user
   const currentUser = AuthService.getCurrentUser();
 
   return (

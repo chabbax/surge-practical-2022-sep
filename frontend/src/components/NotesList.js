@@ -3,20 +3,25 @@ import NoteDataService from "../services/NoteService";
 import { Link } from "react-router-dom";
 
 const NotesList = () => {
+
+  // Tracking the state of the object and assigning them to different objects accordingly 
   const [notes, setNotes] = useState([]);
   const [currentNote, setCurrentNote] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [searchTitle, setSearchTitle] = useState("");
 
+  // After rendering 
   useEffect(() => {
     retrieveNotes();
   }, []);
 
+  // Search function
   const onChangeSearchTitle = (e) => {
     const searchTitle = e.target.value;
     setSearchTitle(searchTitle);
   };
 
+  // Retriev notes from the database
   const retrieveNotes = () => {
     NoteDataService.getAll()
       .then((response) => {
@@ -34,11 +39,13 @@ const NotesList = () => {
     setCurrentIndex(-1);
   };
 
+  // Highlight selected note record
   const setActiveNote = (note, index) => {
     setCurrentNote(note);
     setCurrentIndex(index);
   };
 
+  // Delete all records from the database
   const removeAllNotes = () => {
     NoteDataService.removeAll()
       .then((response) => {
@@ -50,6 +57,7 @@ const NotesList = () => {
       });
   };
 
+  // Search function
   const findByTitle = () => {
     NoteDataService.findByTitle(searchTitle)
       .then((response) => {

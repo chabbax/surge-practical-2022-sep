@@ -19,8 +19,10 @@ import com.surge.spring.jwt.mongodb.security.jwt.AuthTokenFilter;
 import com.surge.spring.jwt.mongodb.security.services.UserDetailsServiceImpl;
 
 @Configuration
-@EnableWebSecurity 	// Allows Spring to find and automatically apply the class to the global Web Security.
-@EnableGlobalMethodSecurity(prePostEnabled = true) // Provides AOP security on methods. It enables @PreAuthorize @PostAuthorize
+// Allows Spring to find and automatically apply the class to the global Web Security.
+@EnableWebSecurity 	
+// Provides AOP security on methods. It enables @PreAuthorize @PostAuthorize
+@EnableGlobalMethodSecurity(prePostEnabled = true) 
 
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired

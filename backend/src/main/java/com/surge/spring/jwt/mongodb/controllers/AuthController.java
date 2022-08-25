@@ -51,7 +51,7 @@ public class AuthController {
 	@Autowired
 	JwtUtils jwtUtils;
 
-	/*
+	/**
 	 *  authenticate { username, pasword }
 	 *  update SecurityContext using Authentication object
      *  generate JWT
@@ -130,7 +130,8 @@ public class AuthController {
 		}
 
 		user.setRoles(roles);
-		userRepository.save(user); // Save User to database using UserRepository
+		// Save User to database using UserRepository
+		userRepository.save(user); 
 
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
 	}

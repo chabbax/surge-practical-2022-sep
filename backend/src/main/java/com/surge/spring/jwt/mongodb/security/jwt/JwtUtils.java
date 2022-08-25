@@ -12,7 +12,7 @@ import com.surge.spring.jwt.mongodb.security.services.UserDetailsImpl;
 
 import io.jsonwebtoken.*;
 
-/*  
+/**  
  * Generate a JWT from username, date, expiration, secret
  * Get username from JWT
  * Validate a JWT

@@ -1,14 +1,14 @@
-version: "3"
-services:
+version: "3.7"
 
+services:
   mongodb:
     image: mongo:latest
-    container_name: yamadb
+    container_name: surgedb
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: olaf
-      MONGO_INITDB_ROOT_PASSWORD: retorsion12
-      MONGO_INITDB_DATABASE: bezkoder_db
+      MONGO_INITDB_ROOT_USERNAME: chandur
+      MONGO_INITDB_ROOT_PASSWORD: 12345
+      MONGO_INITDB_DATABASE: surge
     volumes:
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
@@ -33,4 +33,4 @@ services:
     depends_on: 
       - backend
     ports:
-      - 3000:3000
+      - 8081:8081

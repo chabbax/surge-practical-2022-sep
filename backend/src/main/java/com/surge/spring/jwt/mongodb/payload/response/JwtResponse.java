@@ -1,4 +1,7 @@
-// JwtResponse: { token, type, id, username, email, roles }
+/**
+ *  Define response payloads for Spring RestController
+ * 	JwtResponse: { token, type, id, username, email, roles }
+*/
 package com.surge.spring.jwt.mongodb.payload.response;
 
 import java.util.List;

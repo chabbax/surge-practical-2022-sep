@@ -1,4 +1,7 @@
-// LoginRequest: { username, password }
+/**
+ *  Define request payloads for Spring RestController
+ * 	LoginRequest: { username, password }
+*/
 package com.surge.spring.jwt.mongodb.payload.request;
 
 import javax.validation.constraints.NotBlank;

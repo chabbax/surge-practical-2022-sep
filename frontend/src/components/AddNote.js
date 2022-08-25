@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import NoteDataService from "../services/NoteService";
 
 const AddNote = () => {
+
+  // Initializing the state
   const initialNoteState = {
     id: null,
     title: "",
     description: "",
     published: false,
   };
+
+  // Tracking the state of the object and assigning them to different objects accordingly 
   const [note, setNote] = useState(initialNoteState);
   const [submitted, setSubmitted] = useState(false);
 
@@ -16,6 +20,7 @@ const AddNote = () => {
     setNote({ ...note, [name]: value });
   };
 
+  // Save note in data object to be saved in database
   const saveNote = () => {
     var data = {
       title: note.title,
@@ -38,6 +43,7 @@ const AddNote = () => {
       });
   };
 
+  // After note added set state to the initial state
   const newNote = () => {
     setNote(initialNoteState);
     setSubmitted(false);
